@@ -83,7 +83,23 @@
     }
     ?>
 
-    
+    <h2>Snack 3 PHP</h2>
+    <?php 
+    /*
+    PHP Snack 3 Bonus (solo come bonus e solo se completati i due precedenti)
+    Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
+    */
+
+    $numbers = [];
+    $counter = 0;
+    while (count($numbers) < 15) {
+        $number = rand(1, 100);
+        if (array_search($number, $numbers) === false) {
+            $numbers[] = $number;
+        }
+    }
+    var_dump($numbers);
+    ?>
 
 </body>
 </html>
